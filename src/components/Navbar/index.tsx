@@ -60,7 +60,7 @@ const Navbar = () => {
             onClick={() => handleItemClick(item.id)}
           >
             <li>
-              <span>{item.id}</span>
+              <span className="number">{item.id}</span>
               <span className="content">{item.title}</span>
             </li>
           </a>

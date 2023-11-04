@@ -1,10 +1,12 @@
-import React from 'react'
-import LogoImage from '../../assets/shared/logo.svg'
-import './LogoStyle.scss'
+import React from "react";
+import LogoImage from "../../assets/shared/logo.svg";
+import "./LogoStyle.scss";
 const Logo = () => {
   return (
-    <img src={LogoImage} alt="Logo"/>
-  )
-}
+    <a href="/">
+      <img src={LogoImage} alt="Logo" />
+    </a>
+  );
+};
 
-export default Logo
+export default Logo;

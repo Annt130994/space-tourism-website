@@ -4,6 +4,7 @@
   --primary-color-butterfly: #d0d6f9;
   --primary-color-white: #ffffff;
   --primary-color-hover: #8a8b90;
+  --primary-button-hover: #24262f;
 
   --primary-fontFamily-default: "Bellefair", sans-serif;
   --primary-fontFamily-second: "Barlow Condensed", sans-serif;
@@ -65,7 +66,7 @@ h5 {
   letter-spacing: 2.7px;
   text-transform: uppercase;
 }
-.bodytext {
+.bodyText {
   font-family: var(--primary-fontFamily-thirty);
   font-size: 18px;
   line-height: 32px;
