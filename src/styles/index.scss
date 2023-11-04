@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@0;1&family=Barlow:ital@0;1&family=Bellefair&display=swap");
+:root {
+  --primary-color-black: #0b0d17;
+  --primary-color-butterfly: #d0d6f9;
+  --primary-color-white: #ffffff;
+  --primary-color-hover: #8a8b90;
+
+  --primary-fontFamily-default: "Bellefair", sans-serif;
+  --primary-fontFamily-second: "Barlow Condensed", sans-serif;
+  --primary-fontFamily-thirty: "Barlow", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--primary-fontFamily-default);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// typography
+// Title
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--primary-color-white);
+  font-style: normal;
+  line-height: normal;
+}
+h1 {
+  font-size: 150px;
+}
+h2 {
+  font-size: 100px;
+}
+h3 {
+  font-size: 56px;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 32px;
+}
+h5 {
+  font-family: var(--primary-fontFamily-second);
+  color: var(--primary-color-butterfly);
+  font-size: 28px;
+  letter-spacing: 4.725px;
+}
+// SubHeading
+.subHeading1 {
+  font-size: 28px;
+  text-transform: uppercase;
+}
+.subHeading2 {
+  font-family: var(--primary-fontFamily-second);
+  font-size: 14px;
+  letter-spacing: 2.362px;
+  text-transform: uppercase;
+}
+.subHeading3 {
+  font-family: var(--primary-fontFamily-second);
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+}
+.bodytext {
+  font-family: var(--primary-fontFamily-thirty);
+  font-size: 18px;
+  line-height: 32px;
+}

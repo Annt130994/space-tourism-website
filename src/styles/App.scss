@@ -1,0 +1,22 @@
+// Desktop
+.App {
+  background: url(../assets/home/background-home-desktop.jpg) lightgray 0px 0px /
+    100% 100% no-repeat;
+  mix-blend-mode: screen;
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+// Responsive table and mobile styles
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .App {
+    background: url(../assets/home/background-home-tablet.jpg) lightgray 0px 0px /
+      100% 100% no-repeat;
+  }
+}
+@media screen and (max-width: 768px) {
+  .App {
+    background: url(../assets/home/background-home-mobile.jpg) lightgray 0px 0px /
+      100% 100% no-repeat;
+  }
+}

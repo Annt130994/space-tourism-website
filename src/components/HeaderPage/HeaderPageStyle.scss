@@ -1,0 +1,18 @@
+.divider {
+  height: 1px;
+  background: var(--primary-color-white);
+  opacity: 0.25;
+  flex-shrink: 0;
+
+  position: absolute;
+  margin-top: 88px;
+  left: 167px;
+  right: 800px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  .divider {
+    display: none;
+  }
+}
