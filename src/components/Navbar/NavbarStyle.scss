@@ -20,29 +20,26 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
-    a {
-      text-decoration: none;
-      cursor: url("../../assets/shared/icon-cursor.svg"), auto;
-      li {
-        color: var(--primary-color-white);
-        font-weight: 700;
-        list-style: none;
-        .content {
-          font-weight: 400;
-          margin-left: 12px;
-        }
+    cursor: url("../../assets/shared/icon-cursor.svg"), auto;
+    li {
+      color: var(--primary-color-white);
+      font-weight: 700;
+      list-style: none;
+      .content {
+        font-weight: 400;
+        margin-left: 12px;
       }
     }
-    a.active,
-    a:hover {
+    li.active,
+    li:hover {
       line-height: 93px;
       margin-top: 3px;
       flex-shrink: 0;
     }
-    a.active {
+    li.active {
       border-bottom: 3px solid var(--primary-color-white);
     }
-    a:hover {
+    li:hover {
       border-bottom: 3px solid var(--primary-color-hover);
     }
   }
@@ -55,14 +52,12 @@
     ul {
       padding: 0px;
       gap: 37px;
-      a {
-        li {
-          .number {
-            display: none;
-          }
-          .content {
-            margin-left: 0px;
-          }
+      li {
+        .number {
+          display: none;
+        }
+        .content {
+          margin-left: 0px;
         }
       }
     }

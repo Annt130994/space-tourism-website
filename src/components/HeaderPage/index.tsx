@@ -4,14 +4,21 @@ import Navbar from "../Navbar";
 
 import "./HeaderPageStyle.scss";
 
-const HeaderPage = () => {
+interface DataProps {
+  onItemClick: (itemId: string) => void;
+}
+
+const HeaderPage = (props: DataProps) => {
+  const handleItemClick = (itemId: string) => {
+    console.log("Item clicked:", itemId);
+    props.onItemClick(itemId);
+  };
   return (
     <>
       <Logo />
       <div className="divider" />
-      <Navbar />
+      <Navbar onItemClick={handleItemClick} />
     </>
   );
 };
-
 export default HeaderPage;

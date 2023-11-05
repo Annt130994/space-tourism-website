@@ -1,41 +1,18 @@
 import React, { useState, useEffect } from "react";
+import ItemNavbar from "../../data/itemNavbar";
 import "./NavbarStyle.scss";
 
-interface DataNavbar {
-  id: string;
-  title: string;
-  link: string;
+interface DataProps {
+  onItemClick: (itemId: string) => void;
 }
 
-const itemNavbar: DataNavbar[] = [
-  {
-    id: "00",
-    title: "Home",
-    link: "/",
-  },
-  {
-    id: "01",
-    title: "Destination",
-    link: "/destination",
-  },
-  {
-    id: "02",
-    title: "Crew",
-    link: "/crew",
-  },
-  {
-    id: "03",
-    title: "Technology",
-    link: "/technology",
-  },
-];
-
-const Navbar = () => {
+const Navbar = (props: DataProps) => {
   const [active, setActive] = useState(localStorage.getItem("active") || "00");
 
   const handleItemClick = (item: string) => {
     console.log("Item clicked:", item);
     setActive(item);
+    props.onItemClick(item);
     localStorage.setItem("active", item);
     console.log("active:", active);
   };
@@ -50,20 +27,17 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <ul>
-        {itemNavbar.map((item) => (
-          <a
+        {ItemNavbar.map((item) => (
+          <li
             key={item.id}
-            href={item.link}
             className={
               active === item.id ? "active subHeading3" : "subHeading3"
             }
             onClick={() => handleItemClick(item.id)}
           >
-            <li>
-              <span className="number">{item.id}</span>
-              <span className="content">{item.title}</span>
-            </li>
-          </a>
+            <span className="number">{item.id}</span>
+            <span className="content">{item.title}</span>
+          </li>
         ))}
       </ul>
     </div>

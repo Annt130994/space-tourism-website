@@ -1,22 +1,64 @@
 // Desktop
-.App {
-  background: url(../assets/home/background-home-desktop.jpg) lightgray 0px 0px /
-    100% 100% no-repeat;
+.home,
+.destination,
+.crew,
+.technology {
   mix-blend-mode: screen;
   min-height: 100vh;
   color: #ffffff;
 }
 
+.home {
+  background: url(../assets/home/background-home-desktop.jpg) lightgray 0px 0px /
+    100% 100% no-repeat;
+}
+
+.destination {
+  background: url(../assets/destination/background-destination-desktop.jpg)
+    lightgray 0px 0px / 100% 100% no-repeat;
+}
+.crew {
+  background: url(../assets/crew//background-crew-desktop.jpg) lightgray 0px 0px /
+    100% 100% no-repeat;
+}
+.technology {
+  background: url(../assets/technology/background-technology-desktop.jpg)
+    lightgray 0px 0px / 100% 100% no-repeat;
+}
 // Responsive table and mobile styles
 @media screen and (min-width: 768px) and (max-width: 1440px) {
-  .App {
+  .home {
     background: url(../assets/home/background-home-tablet.jpg) lightgray 0px 0px /
       100% 100% no-repeat;
   }
+  .destination {
+    background: url(../assets/destination/background-destination-tablet.jpg)
+      lightgray 0px 0px / 100% 100% no-repeat;
+  }
+  .crew {
+    background: url(../assets/crew//background-crew-tablet.jpg) lightgray 0px
+      0px / 100% 100% no-repeat;
+  }
+  .technology {
+    background: url(../assets/technology/background-technology-tablet.jpg)
+      lightgray 0px 0px / 100% 100% no-repeat;
+  }
 }
 @media screen and (max-width: 768px) {
-  .App {
+  .home {
     background: url(../assets/home/background-home-mobile.jpg) lightgray 0px 0px /
       100% 100% no-repeat;
+  }
+  .destination {
+    background: url(../assets/destination/background-destination-mobile.jpg)
+      lightgray 0px 0px / 100% 100% no-repeat;
+  }
+  .crew {
+    background: url(../assets/crew//background-crew-mobile.jpg) lightgray 0px
+      0px / 100% 100% no-repeat;
+  }
+  .technology {
+    background: url(../assets/technology/background-technology-mobile.jpg)
+      lightgray 0px 0px / 100% 100% no-repeat;
   }
 }

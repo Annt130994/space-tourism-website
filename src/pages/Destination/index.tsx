@@ -1,11 +1,14 @@
 import React from "react";
-import "./ContentStyle.scss";
-import ButtonLarge from "../ButtonLarge";
+import "./DestinationStyle.scss";
 
-const Content = () => {
+interface DestinationProps {
+  itemId: string;
+}
+
+const Destination: React.FC<DestinationProps> = ({ itemId }) => {
   return (
     <>
-      <div className="body-content">
+      <div className={itemId === "01" ? "body-content" : "hide"}>
         <div className="box-content">
           <h5>SO, YOU WANT TO TRAVEL TO</h5>
           <h1>SPACE</h1>
@@ -16,10 +19,9 @@ const Content = () => {
             world experience!
           </div>
         </div>
-        <ButtonLarge />
       </div>
     </>
   );
 };
 
-export default Content;
+export default Destination;
