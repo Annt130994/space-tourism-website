@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import ItemNavbar from "../../data/itemNavbar";
 
-import TitleId from "../../features/TitleId";
 import TabPlanet from "../../features/TabPlanet";
 
 import "./DestinationStyle.scss";
@@ -20,6 +19,10 @@ const Destination: React.FC<DestinationProps> = ({ itemId }) => {
   return (
     <>
       <div className={itemId === "01" ? "container-destination" : "hide"}>
+        <div className="container-title">
+          <h5 className="title-id">{itemId}</h5>
+          <h5 className="title-content">Pick your destination</h5>
+        </div>
         <div className="container-content">
           {/* Tab */}
           <div className="container-tab">
@@ -55,14 +58,15 @@ const Destination: React.FC<DestinationProps> = ({ itemId }) => {
         </div>
         {destinationItem &&
           destinationItem.tab?.map((tabItem) => (
-            <div key={tabItem.id}>
-              <TitleId
-                activeTab={activeTab}
-                itemId={itemId}
-                tabId={tabItem.id}
-                imagePlanet={tabItem.img}
+            <>
+              <img
+                className={
+                  activeTab === tabItem.id ? "container-image" : "hide"
+                }
+                src={tabItem.img}
+                alt={tabItem.title}
               />
-            </div>
+            </>
           ))}
       </div>
     </>
