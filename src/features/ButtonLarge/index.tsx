@@ -10,7 +10,7 @@ const ButtonLarge = (props: DataProps) => {
     props.onItemClick(itemId);
   };
   return (
-    <div className="container" onClick={() => handleClick("01")}>
+    <div className="container-button" onClick={() => handleClick("01")}>
       <h4 className="title">Explore</h4>
     </div>
   );

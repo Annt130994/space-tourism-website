@@ -1,4 +1,4 @@
-.container {
+.container-button {
   text-decoration: none;
   width: 274px;
   height: 274px;
@@ -13,7 +13,7 @@
   right: 165px;
   bottom: 131px;
 
-  cursor: url("../../assets/shared/icon-cursor.svg"), auto;
+  cursor: url("../../../public/assets/shared/icon-cursor.svg"), auto;
 
   h4.title {
     color: var(--primary-color-black);
@@ -22,6 +22,6 @@
     letter-spacing: 2px;
   }
 }
-.container:hover {
+.container-button:hover {
   box-shadow: 0px 0px 88px 88px var(--primary-button-hover);
 }

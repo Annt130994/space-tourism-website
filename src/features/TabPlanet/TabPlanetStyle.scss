@@ -1,0 +1,26 @@
+.tabPlanet {
+  h2 {
+    margin: 37px 0px 14px;
+    text-transform: uppercase;
+  }
+  .bodyText {
+    color: var(--primary-color-butterfly);
+    margin-bottom: 54px;
+  }
+  .tabPlanet-divider {
+    height: 1px;
+    width: 100%;
+    background: #383b4b;
+  }
+  .container-subHeading {
+    display: grid;
+    grid-template-columns: 50% 50% auto;
+    p.subHeading2 {
+      color: var(--primary-color-butterfly);
+      margin: 28px 0px 12px;
+    }
+    p.subHeading1 {
+      margin: 0px;
+    }
+  }
+}
