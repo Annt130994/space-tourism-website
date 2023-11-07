@@ -1,9 +1,10 @@
-.container-destination {
+.container-crew {
+  height: 100vh;
   .container-title {
     display: inline-flex;
     padding-right: 0px;
     align-items: flex-start;
-    gap: 28px;
+    gap: 24px;
 
     position: absolute;
     top: 212px;
@@ -21,46 +22,45 @@
       text-transform: uppercase;
     }
   }
-  .container-content {
-    width: 445px;
+  .crew-content {
+    width: 488px;
     position: absolute;
-    top: 310px;
-    right: 163px;
-    .container-tab {
-      height: 34px;
+    top: 400px;
+    left: 165px;
+    .crew-slider {
       display: flex;
       align-items: flex-start;
-      gap: 35px;
+      gap: 24px;
+
+      position: absolute;
+      top: 354px;
       cursor: url("../../../public/assets/shared/icon-cursor.svg"), auto;
-      span {
-        color: var(--primary-color-butterfly);
+      span.circle {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: var(--primary-color-hover);
       }
       span.active,
       span:hover {
-        padding-bottom: 12px;
-        color: var(--primary-color-white);
-        border-bottom: 3px solid var(--primary-color-white);
-      }
-      span.active {
-        border-bottom: 3px solid var(--primary-color-white);
+        background-color: var(--primary-color-white);
       }
       span:hover {
-        border-bottom: 3px solid var(--primary-color-hover);
+        background-color: gray;
       }
     }
   }
   .container-image {
     position: absolute;
-    top: 320px;
-    left: 240px;
+    bottom: 0px;
+    right: 137px;
   }
 }
 @media screen and (max-width: 1440px) and (min-width: 768px) {
-  .container-destination {
+  .container-crew {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
-    .container-image,
     .container-content {
       position: unset;
     }
@@ -74,47 +74,32 @@
       }
     }
     .container-image {
-      width: 300px;
-      height: 300px;
-      padding-top: 220px;
-      padding-bottom: 53px;
+      height: 370px;
+      left: 40%;
     }
-    .container-content {
-      width: 573px;
-      .container-tab {
+    .crew-content {
+      display: flex;
+      flex-direction: column-reverse;
+      position: unset;
+      width: 450px;
+      padding-top: 220px;
+      .crew-slider {
         justify-content: center;
-        span {
-          font-size: 16px;
-          letter-spacing: 2.7px;
-        }
-        span.active,
-        span:hover {
-          padding-bottom: 12px;
+        gap: 16px;
+        position: unset;
+        span.circle {
+          width: 10px;
+          height: 10px;
         }
       }
-      .container-tab-content {
+      .container-slider-content {
         text-align: center;
-        h2.tabPlanet-title {
-          margin: 32px 0px 8px;
-          font-size: 80px;
-          font-weight: 400;
-        }
-        .bodyText {
-          margin: 0px 0px 49px;
-          font-size: 16px;
-          line-height: 28px;
-        }
-        .container-subHeading {
-          p.subHeading2 {
-            margin: 29px 0px 12px;
-          }
-        }
       }
     }
   }
 }
 @media screen and (max-width: 768px) {
-  .container-destination {
+  .container-crew {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
@@ -137,9 +122,9 @@
       padding-top: 140px;
       padding-bottom: 26px;
     }
-    .container-content {
+    .crew-content {
       width: 327px;
-      .container-tab {
+      .crew-slider {
         justify-content: center;
         gap: 26px;
         span {
@@ -151,24 +136,8 @@
           padding-bottom: 8px;
         }
       }
-      .container-tab-content {
+      .container-slider-content {
         text-align: center;
-        h2.tabPlanet-title {
-          margin: 12px 0px 1px;
-          font-size: 56px;
-          font-weight: 400;
-        }
-        .bodyText {
-          margin: 0px 0px 32px;
-          font-size: 15px;
-          line-height: 25px;
-        }
-        .container-subHeading {
-          display: unset;
-          p.subHeading2 {
-            margin: 32px 0px 12px;
-          }
-        }
       }
     }
   }

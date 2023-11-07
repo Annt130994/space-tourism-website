@@ -10,11 +10,9 @@ const Navbar = (props: DataProps) => {
   const [active, setActive] = useState(localStorage.getItem("active") || "00");
 
   const handleItemClick = (item: string) => {
-    console.log("Item clicked:", item);
     setActive(item);
     props.onItemClick(item);
     localStorage.setItem("active", item);
-    console.log("active:", active);
   };
 
   useEffect(() => {

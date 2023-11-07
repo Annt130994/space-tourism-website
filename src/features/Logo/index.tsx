@@ -1,11 +1,12 @@
 import React from "react";
 import LogoImage from "./logo.svg";
 import "./LogoStyle.scss";
-const Logo = () => {
+
+const Logo: React.FC = () => {
   return (
-    <a href="/">
+    <div className="logo">
       <img src={LogoImage} alt="Logo" />
-    </a>
+    </div>
   );
 };
 

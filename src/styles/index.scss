@@ -10,10 +10,13 @@
   --primary-fontFamily-second: "Barlow Condensed", sans-serif;
   --primary-fontFamily-thirty: "Barlow", sans-serif;
 }
-body {
+* {
+  user-select: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
   font-family: var(--primary-fontFamily-default);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -72,5 +75,5 @@ h5 {
   line-height: 32px;
 }
 .hide {
-  display:none;
+  display: none;
 }

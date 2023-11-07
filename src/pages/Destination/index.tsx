@@ -46,6 +46,7 @@ const Destination: React.FC<DestinationProps> = ({ itemId }) => {
             {destinationItem &&
               destinationItem.tab?.map((tabItem) => (
                 <TabPlanet
+                  key={tabItem.id}
                   tabId={tabItem.id}
                   title={tabItem.title}
                   content={tabItem.content}
@@ -56,18 +57,20 @@ const Destination: React.FC<DestinationProps> = ({ itemId }) => {
               ))}
           </div>
         </div>
-        {destinationItem &&
-          destinationItem.tab?.map((tabItem) => (
-            <>
-              <img
-                className={
-                  activeTab === tabItem.id ? "container-image" : "hide"
-                }
-                src={tabItem.img}
-                alt={tabItem.title}
-              />
-            </>
-          ))}
+        <div className="container-tab-image">
+          {destinationItem &&
+            destinationItem.tab?.map((tabItem) => (
+              <div key={tabItem.id}>
+                <img
+                  className={
+                    activeTab === tabItem.id ? "container-image" : "hide"
+                  }
+                  src={tabItem.img}
+                  alt={tabItem.title}
+                />
+              </div>
+            ))}
+        </div>
       </div>
     </>
   );

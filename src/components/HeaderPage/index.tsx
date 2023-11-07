@@ -8,9 +8,8 @@ interface DataProps {
   onItemClick: (itemId: string) => void;
 }
 
-const HeaderPage = (props: DataProps) => {
+const HeaderPage: React.FC<DataProps> = (props, onClickBackHome) => {
   const handleItemClick = (itemId: string) => {
-    console.log("Item clicked:", itemId);
     props.onItemClick(itemId);
   };
   return (
