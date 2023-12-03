@@ -1,13 +1,12 @@
 import React from "react";
 import LogoImage from "./logo.svg"
 import "./LogoStyle.scss";
-
-// import LogoImage from "./Logo";
-
-const Logo: React.FC = () => {
+interface LogoProps {
+  onClick: (itemId: string) => void;
+}
+const Logo: React.FC<LogoProps> = ({onClick}) => {
   return (
-    <div className="logo">
-      Logo
+    <div className="logo" onClick={()=> onClick("00")}>
       <img src={LogoImage} alt="Logo" />
     </div>
   );

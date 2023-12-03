@@ -1,26 +1,24 @@
-.navbar {
-  width: 830px;
-  height: 96px;
+.navbar-mobile {
+  width: 254px;
+  height: 100vh;
 
   position: absolute;
   right: 0;
-  top: 40px;
 
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(40px);
   ul {
-    height: 100%;
-    margin: 0px;
+    margin: 118px 0px 0px 32px;
 
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: center;
-    gap: 50px;
+    gap: 32px;
     cursor: url("../../../public/assets/shared/icon-cursor.svg"), auto;
     li {
       color: var(--primary-color-white);
       font-weight: 700;
       list-style: none;
+      line-height: 31px;
       .content {
         font-weight: 400;
         margin-left: 12px;
@@ -28,15 +26,14 @@
     }
     li.active,
     li:hover {
-      line-height: 93px;
-      margin-top: 3px;
-      flex-shrink: 0;
+      width: 100%;
+      line-height: 31px;
     }
     li.active {
-      border-bottom: 3px solid var(--primary-color-white);
+      border-right: 3px solid var(--primary-color-white);
     }
     li:hover {
-      border-bottom: 3px solid var(--primary-color-hover);
+      border-right: 3px solid var(--primary-color-hover);
     }
   }
   z-index: 1;

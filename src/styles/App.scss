@@ -25,6 +25,13 @@
   background: url(../../public/assets/technology/background-technology-desktop.jpg)
     lightgray 0px 0px / 100% 100% no-repeat;
 }
+
+//Mobile
+.homePage {
+  .toggle {
+    display: none;
+  }
+}
 // Responsive table and mobile styles
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .home {
@@ -44,6 +51,12 @@
       lightgray 0px 0px / 100% 100% no-repeat;
   }
 }
+//Mobile
+.homePage {
+  .toggle {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .home {
     background: url(../../public/assets/home/background-home-mobile.jpg)
@@ -60,5 +73,17 @@
   .technology {
     background: url(../../public/assets/technology/background-technology-mobile.jpg)
       lightgray 0px 0px / 100% 100% no-repeat;
+  }
+  .homePage {
+    .toggle {
+      display: block;
+      img {
+        position: absolute;
+        top: 34px;
+        right: 26px;
+        cursor: url("../../public/assets/shared/icon-cursor.svg"), auto;
+        z-index: 2;
+      }
+    }
   }
 }
