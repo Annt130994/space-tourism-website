@@ -2,15 +2,12 @@ import React from "react";
 import "./ButtonLargeStyle.scss";
 
 interface DataProps {
-  onItemClick: (itemId: string) => void;
+  onClick: (itemId: string) => void;
 }
 
-const ButtonLarge = (props: DataProps) => {
-  const handleClick = (itemId: string) => {
-    props.onItemClick(itemId);
-  };
+const ButtonLarge: React.FC<DataProps> = ({onClick}) => {
   return (
-    <div className="container-button" onClick={() => handleClick("01")}>
+    <div className="container-button" onClick={() => onClick("01")}>
       <h4 className="title">Explore</h4>
     </div>
   );

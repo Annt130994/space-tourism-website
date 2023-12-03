@@ -13,12 +13,9 @@ interface DestinationProps {
 const Destination: React.FC<DestinationProps> = ({ itemId }) => {
   const destinationItem = ItemNavbar.find((item) => item.id === "01");
   const [activeTab, setActiveTab] = useState("moon");
-  const handleTabClick = (item: string) => {
-    setActiveTab(item);
-  };
   return (
     <>
-      <div className={itemId === "01" ? "container-destination" : "hide"}>
+      <div className="container-destination">
         <div className="container-title">
           <h5 className="title-id">{itemId}</h5>
           <h5 className="title-content">Pick your destination</h5>
@@ -35,7 +32,7 @@ const Destination: React.FC<DestinationProps> = ({ itemId }) => {
                       ? "active subHeading3"
                       : "subHeading3"
                   }
-                  onClick={() => handleTabClick(tabItem.id)}
+                  onClick={() => setActiveTab(tabItem.id)}
                 >
                   {tabItem.title}
                 </span>
@@ -61,13 +58,13 @@ const Destination: React.FC<DestinationProps> = ({ itemId }) => {
           {destinationItem &&
             destinationItem.tab?.map((tabItem) => (
               <div key={tabItem.id}>
+                {activeTab === tabItem.id && 
                 <img
-                  className={
-                    activeTab === tabItem.id ? "container-image" : "hide"
-                  }
+                  className="container-image"
                   src={tabItem.img}
                   alt={tabItem.title}
                 />
+}
               </div>
             ))}
         </div>

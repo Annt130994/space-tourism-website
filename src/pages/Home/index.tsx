@@ -3,17 +3,13 @@ import ButtonLarge from "../../features/ButtonLarge";
 import "./HomeStyle.scss";
 
 interface HomeProps {
-  itemId: string;
-  onItemClick: (itemId: string) => void;
+  onClick: (itemId: string) => void;
 }
 
-const Home: React.FC<HomeProps> = ({ itemId, onItemClick }) => {
-  const handleClick = (newItemId: string) => {
-    onItemClick(newItemId);
-  };
+const Home: React.FC<HomeProps> = ({ onClick }) => {
   return (
     <>
-      <div className={itemId === "00" ? "body-content" : "hide"}>
+      <div className="body-content">
         <div className="box-content">
           <h5>SO, YOU WANT TO TRAVEL TO</h5>
           <h1>SPACE</h1>
@@ -24,7 +20,7 @@ const Home: React.FC<HomeProps> = ({ itemId, onItemClick }) => {
             world experience!
           </div>
         </div>
-        <ButtonLarge onItemClick={handleClick} />
+        <ButtonLarge onClick={onClick} />
       </div>
     </>
   );

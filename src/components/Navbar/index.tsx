@@ -1,27 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ItemNavbar from "../../data/itemNavbar";
 import "./NavbarStyle.scss";
 
 interface DataProps {
-  onItemClick: (itemId: string) => void;
+  itemId: string;
+  onClick: (itemId: string) => void;
 }
 
-const Navbar = (props: DataProps) => {
-  const [active, setActive] = useState(localStorage.getItem("active") || "00");
-
-  const handleItemClick = (item: string) => {
-    setActive(item);
-    props.onItemClick(item);
-    localStorage.setItem("active", item);
-  };
-
-  useEffect(() => {
-    const savedActive = localStorage.getItem("active");
-    if (savedActive) {
-      setActive(savedActive);
-    }
-  }, []);
-
+const Navbar: React.FC<DataProps> = ({itemId, onClick}) => {
   return (
     <div className="navbar">
       <ul>
@@ -29,9 +15,9 @@ const Navbar = (props: DataProps) => {
           <li
             key={item.id}
             className={
-              active === item.id ? "active subHeading3" : "subHeading3"
+              itemId === item.id ? "active subHeading3" : "subHeading3"
             }
-            onClick={() => handleItemClick(item.id)}
+            onClick={() => onClick(item.id)}
           >
             <span className="number">{item.id}</span>
             <span className="content">{item.title}</span>

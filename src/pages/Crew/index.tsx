@@ -13,13 +13,9 @@ interface CrewProps {
 const Crew: React.FC<CrewProps> = ({ itemId }) => {
   const crewItem = ItemNavbar.find((item) => item.id === "02");
   const [activeSlider, setActiveSlider] = useState("commander");
-  const handleSliderClick = (item: string) => {
-    setActiveSlider(item);
-  };
   return (
     <>
-      <div className={itemId === "02" ? "container-crew" : "hide"}>
-        
+      <div className="container-crew">
         <div className="container-title">
           <h5 className="title-id">{itemId}</h5>
           <h5 className="title-content">Meet your crew</h5>
@@ -37,7 +33,7 @@ const Crew: React.FC<CrewProps> = ({ itemId }) => {
                       ? "active circle"
                       : "circle"
                   }
-                  onClick={() => handleSliderClick(tabItem.id)}
+                  onClick={() => setActiveSlider(tabItem.id)}
                 />
               ))}
           </div>
@@ -60,13 +56,13 @@ const Crew: React.FC<CrewProps> = ({ itemId }) => {
           {crewItem &&
             crewItem.tab?.map((tabItem) => (
               <div key={tabItem.id}>
+                {activeSlider === tabItem.id &&
                 <img
-                  className={
-                    activeSlider === tabItem.id ? "container-image" : "hide"
-                  }
+                  className="container-image"
                   src={tabItem.img}
                   alt={tabItem.title}
                 />
+}
               </div>
             ))}
         </div>

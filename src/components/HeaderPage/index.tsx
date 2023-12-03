@@ -5,18 +5,16 @@ import Navbar from "../Navbar";
 import "./HeaderPageStyle.scss";
 
 interface DataProps {
-  onItemClick: (itemId: string) => void;
+  itemId: string;
+  onClick: (itemId: string) => void;
 }
 
-const HeaderPage: React.FC<DataProps> = (props, onClickBackHome) => {
-  const handleItemClick = (itemId: string) => {
-    props.onItemClick(itemId);
-  };
+const HeaderPage: React.FC<DataProps> = ({ itemId, onClick}) => {
   return (
     <>
       <Logo />
       <div className="divider" />
-      <Navbar onItemClick={handleItemClick} />
+      <Navbar itemId={itemId} onClick={onClick} />
     </>
   );
 };

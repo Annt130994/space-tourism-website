@@ -5,27 +5,39 @@ import HeaderPage from "./components/HeaderPage";
 import Home from "./pages/Home";
 import Destination from "./pages/Destination";
 import Crew from "./pages/Crew";
+import Technology from "./pages/Technology";
 
 function App() {
   const [itemId, setItemId] = useState<string>("00");
-  const handleItemClick = (newItemId: string) => {
-    setItemId(newItemId);
-  };
+
   return (
-    <section className="homePage" id="#">
-      <HeaderPage onItemClick={handleItemClick} />
-      <div className={itemId === "00" ? "home" : "hide"}>
-        <Home itemId={itemId} onItemClick={handleItemClick} />
-      </div>
-      <div className={itemId === "01" ? "destination" : "hide"}>
-        <Destination itemId={itemId} />
-      </div>
-      <div className={itemId === "02" ? "crew" : "hide"}>
-        <Crew itemId={itemId} />
-      </div>
-      <div className={itemId === "03" ? "technology" : "hide"}>
-        {/* <Destination /> */}
-      </div>
+    <section className="homePage">
+      
+      <HeaderPage itemId={itemId} onClick={setItemId} />
+
+      {itemId === "00" && (
+        <div className="home">
+          <Home onClick={setItemId} />
+        </div>
+      )}
+
+      {itemId === "01" && (
+        <div className="destination">
+          <Destination itemId={itemId} />
+        </div>
+      )}
+
+      {itemId === "02" && (
+        <div className="crew">
+          <Crew itemId={itemId} />
+        </div>
+      )}
+
+      {itemId === "03" && (
+        <div className="technology">
+          <Technology itemId={itemId} />
+        </div>
+      )}
     </section>
   );
 }
